@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -37,12 +37,17 @@ namespace Day1
                 }
             }
            
-            for(i = 0;i < stud.Length-1; i++)
+            
+            for (i = 1; i < stud.Length; i++)
             {
-                if (stud[i] > stud[i+1] ) {
-                    int temp = stud[i];
-                    stud[i] = stud[i+1];
-                    stud[i+1] = temp;
+                for (int j = 0; j < i; j++)
+                {
+                    if (stud[i] < stud[j])
+                    {
+                        int temp = stud[i];
+                        stud[i] = stud[j];
+                        stud[j] = temp;
+                    }
                 }
             }
             Console.WriteLine("Total= "+total);
