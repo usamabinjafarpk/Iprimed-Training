@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,16 +17,11 @@ namespace Assignment4
 
         public virtual void GetData()
         {
-            Console.WriteLine("Enter the Order Id:");
-            OrderId=int.Parse(Console.ReadLine());
+            OrderId = new Random().Next();
             Console.WriteLine("Enter the Order date:");
             OrderDate=Console.ReadLine();
-            Console.WriteLine("Enter furniture type (Chair/Cot):");
-            FurnitureType = Console.ReadLine();
             Console.WriteLine("Enter the quantity:");
             Qty=int.Parse(Console.ReadLine());
-            //Console.WriteLine("Enter the total amount:");
-            //TotalAmount=int.Parse(Console.ReadLine());
             Console.WriteLine("Enter the payment mode (credit/debit card)");
             PaymentMode = Console.ReadLine();
         }
@@ -35,9 +30,7 @@ namespace Assignment4
         {
             Console.WriteLine($"Order Id:{OrderId}");
             Console.WriteLine($"Order date:{OrderDate}");
-            Console.WriteLine($"Furniture type:{FurnitureType}");
             Console.WriteLine($"Quantity:{Qty}");
-            //Console.WriteLine($"Total Amount:{TotalAmount}");
             Console.WriteLine($"Payment Mode:{PaymentMode}");
         }
     }
@@ -52,6 +45,7 @@ namespace Assignment4
         public override void GetData()
         {
             base.GetData();
+            FurnitureType = "Chair";
             Console.WriteLine("Enter Chair Type (Wood/Steel/Plastic):");
             ChairType = Console.ReadLine();
             if (ChairType.Equals("Wood", StringComparison.OrdinalIgnoreCase))
@@ -78,7 +72,8 @@ namespace Assignment4
         }
         public override void ShowData()
         {
-            base.ShowData(); 
+            base.ShowData();
+            Console.WriteLine($"Furniture type:{FurnitureType}");
             Console.WriteLine($"Chair Type: {ChairType}");
             Console.WriteLine($"Purpose: {Purpose}");
             Console.WriteLine($"Wood Type or Steel type or Plastic Color: {WoodType}");
@@ -96,6 +91,7 @@ namespace Assignment4
         public override void GetData()
         {
             base.GetData();
+            FurnitureType = "Cot";
             Console.WriteLine("Enter Cot Type (Wood/Steel):");
             CotType = Console.ReadLine();
             if (CotType.Equals("Wood", StringComparison.OrdinalIgnoreCase))
@@ -118,6 +114,7 @@ namespace Assignment4
         public override void ShowData()
         {
             base.ShowData();
+            Console.WriteLine($"Furniture type:{FurnitureType}");
             Console.WriteLine($"Cot Type: {CotType}");
             Console.WriteLine($"Wood Type: {WoodType}");
             Console.WriteLine($"Capacity: {Capacity}");
@@ -130,13 +127,38 @@ namespace Assignment4
     {
         static void Main()
         {
-            Chair chair=new Chair();
-            chair.GetData();
-            chair.ShowData();
-            Console.WriteLine();
-            Cot cot = new Cot();
-            cot.GetData();
-            cot.ShowData();
+            do
+            {
+                Console.WriteLine("Enter the Furniture Type");
+                Console.WriteLine("1.Chair");
+                Console.WriteLine("2.Cot");
+                Console.WriteLine("3.Exit");
+                Console.WriteLine("Choose one");
+                int ch = int.Parse(Console.ReadLine());
+                switch (ch)
+                {
+                    case 1:
+                        {
+                            Chair chair = new Chair();
+                            chair.GetData();
+                            chair.ShowData();
+                        }
+                        break;
+                    case 2:
+                        {
+                            Cot cot = new Cot();
+                            cot.GetData();
+                            cot.ShowData();
+                        }
+                        break;
+                    case 3:
+                        {
+                            Environment.Exit(0);
+                        }
+                        break;
+                } 
+            } while (true);
+
         }
     }
 }
