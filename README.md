@@ -1,5 +1,3 @@
-# PracticeRepo
-For practice git commands
 using System.Xml.Linq;
 
 namespace CodeChallenge1
