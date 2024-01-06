@@ -428,19 +428,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ubinjafa\\.nuget\\packages\\": {}
+    "C:\\Users\\usama\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Usama Bin Jafar\\Asp.net core\\Day7\\APIAssignment1\\APIAssignment1.csproj",
+      "projectUniqueName": "D:\\RM\\Iprimed-Training\\APIAssignment1\\APIAssignment1.csproj",
       "projectName": "APIAssignment1",
-      "projectPath": "C:\\Usama Bin Jafar\\Asp.net core\\Day7\\APIAssignment1\\APIAssignment1.csproj",
-      "packagesPath": "C:\\Users\\ubinjafa\\.nuget\\packages\\",
-      "outputPath": "C:\\Usama Bin Jafar\\Asp.net core\\Day7\\APIAssignment1\\obj\\",
+      "projectPath": "D:\\RM\\Iprimed-Training\\APIAssignment1\\APIAssignment1.csproj",
+      "packagesPath": "C:\\Users\\usama\\.nuget\\packages\\",
+      "outputPath": "D:\\RM\\Iprimed-Training\\APIAssignment1\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\ubinjafa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\usama\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -448,6 +453,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
